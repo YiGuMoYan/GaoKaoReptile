@@ -57,7 +57,7 @@ def getWebNum(html):
         html = getCode()
         getWebNum(html)
     else:
-        if 0 < len(htmlBs.find_all(class_='public_list_item public_tbl')) <= 10:
+        if 0 < len(htmlBs.find_all(class_='public_list_item public_tbl')) < 10:
             return 1
         ui = htmlBs.find(class_='ant-pagination').find_all('li')
         webNumber = int(ui[len(ui) - 2]['title'])
